@@ -70,6 +70,7 @@ nav .fa{
     margin: 20px 0 40px;
     font-size: 14px;
     color: #fff;
+    text-align: center;
 }
 .hero-btn {
     display: inline-block;
@@ -169,6 +170,9 @@ p2{
     padding: 20px 12px;
     transition: .5s;
     text-align: left;
+}
+.course-col p{
+    font-weight:520;
 }
 h3{
     text-align: left;
