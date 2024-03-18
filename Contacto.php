@@ -5,7 +5,7 @@
     $message = $_POST['message'];
 
 
-    $email_from = 'pechjosealejandro@gmail.com';
+    $email_from = 'info@sweethome.icu';
 
     $email_subject = "New Form Submission";
     
@@ -15,7 +15,7 @@
                     "Mensaje del usuario: $message.\n";
 
 
-    $to = "pechjosealejandro@gmail.com";
+    $to = "inf.sweethome@gmail.com";
 
     $headers = "From: $email_from \r\n";
 
@@ -23,7 +23,7 @@
 
     mail($to,$email_subject,$email_body,$headers);
 
-    header("Location: contact.html");
+    header("Location: Contactanos.html");
 
 
 ?>
