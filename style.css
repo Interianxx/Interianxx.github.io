@@ -13,6 +13,12 @@
     position: relative;
     overflow: hidden;
 }
+.header img{
+    margin-top: -30px;
+    width: 180;
+    height: 180;
+}
+
 
 .header ul {
     margin-top: -30px;
@@ -78,7 +84,7 @@ nav .fa {
 
 .text-box h1 {
     font-size: 62px;
-    margin-top: 80px;
+    margin-top: 135px;
 }
 
 .text-box p {
@@ -103,8 +109,9 @@ nav .fa {
 }
 
 .hero-btn:hover {
-    border: 1px solid #f44336;
-    background: #f44336;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #f44336;
 }
 
 
