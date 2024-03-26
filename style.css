@@ -5,7 +5,7 @@
 }
 
 .header {
-    min-height: 100vh;
+    min-height: 108vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/limpieza.jpg);
     background-position: center;
@@ -455,6 +455,11 @@ h31 {
     text-align: center;
     color: #fff;
 }
+.sub-header img{
+    margin-top: -30px;
+    width: 180;
+    height: 180;
+}
 
 .sub-header ul {
     margin-top: -30px;
@@ -639,8 +644,7 @@ h31 {
     text-align: left;
 }
 
-.contact-col input,
-.contact-col textarea {
+.contact-col input, .contact-col textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: 17px;
@@ -651,4 +655,11 @@ h31 {
 .footer-link {
     text-decoration: none;
     color: #777;
+}
+
+.contact-col h6{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-weight: 400;
 }
