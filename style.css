@@ -84,11 +84,11 @@ nav .fa {
 
 .text-box h1 {
     font-size: 62px;
-    margin-top: 135px;
+    margin-top: 115px;
 }
 
 .text-box p {
-    margin: 20px 0 40px;
+    margin: -20px 0px 40px 0px;
     font-size: 14px;
     color: #fff;
     text-align: center;
@@ -104,7 +104,7 @@ nav .fa {
     background: transparent;
     cursor: pointer;
     transition: 1s;
-
+    margin-top: -5px;
     margin-bottom: 50px;
 }
 
@@ -277,13 +277,6 @@ h3 {
     width: 100%;
 }
 
-h31 {
-    font-weight: 600;
-    margin: 10px;
-    margin-left: 10px;
-    text-align: center;
-}
-
 .layer {
     background: transparent;
     height: 100%;
@@ -295,7 +288,7 @@ h31 {
 }
 
 .layer:hover {
-    background: rgba(226, 0, 0, 0.7);
+    background: rgba(43, 69, 216, 0.7);
 }
 
 .layer h31 {
@@ -322,13 +315,13 @@ h31 {
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 75px;
 }
 
 .facility-col {
     flex-basis: 23.5%;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 1.5%;
     text-align: left;
 }
 
@@ -344,7 +337,6 @@ h31 {
 
 .facility-col h3 {
     margin-top: 16px;
-    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -353,7 +345,6 @@ h31 {
 .testimonials {
     width: 80%;
     margin: auto;
-    padding-top: 100px;
     text-align: center;
 }
 
