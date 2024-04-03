@@ -208,47 +208,6 @@ h3 {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-/*-- Cuadro */
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: auto;
-    max-width: 1000px;
-    width: 100%;
-    color: #777;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 30px;
-    padding: 10px;
-    color: black;
-    text-align: center;
-}
-
-.box {
-    background-color: fff3f3;
-    border: 0.1px solid #ccc;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .5s;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.box1 {
-    background-color: fff3f3;
-    border: 0.1px solid #ccc;
-    height: auto;
-    display: flex;
-    align-items: Center;
-    justify-content: center;
-    transition: .5s;
-    font-size: 20px;
-    padding: 10px;
-}
-
 @media (max-width:700px) {
     .row {
         flex-direction: column;
@@ -470,7 +429,7 @@ h3 {
 }
 
 
-/*--------------- ¿Quienes somos? --------------*/
+/*--------------- Carrito --------------*/
 
 
 .sub-header {
