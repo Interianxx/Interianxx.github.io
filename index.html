@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -6,7 +8,13 @@
     <title>Sweet Home - El aroma de la limpieza</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+
+    <!--Iconos para redes sociales-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
@@ -20,9 +28,12 @@
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="Servicios.html">SERVICIOS</a></li>
                     <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="Contactanos.html">CONTACTANOS</a></li>                    
-                    <li><a href="Carrito.html">CARRITO</a></li>
+                    <li><a href="Contactanos.html">CONTACTANOS</a></li>                  
                 </ul>
+            </div>
+            <div class="nav container">
+                <li><a href="Carrito.html"><i class='bx bx-shopping-bag' id="cart-icon" style='color:#ffffff'  ></i></a></li> 
+                
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
@@ -212,6 +223,13 @@
         function hideMenu() {
             navLinks.style.right = "-200px";
         }
+    </script>
+
+    <!--Carrito-->
+    <script>
+
+
+
     </script>
 
 </body>

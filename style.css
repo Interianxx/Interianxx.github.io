@@ -4,6 +4,21 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root{
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+
+}
+
+img{
+    width: 100%;   
+}
+
+body{
+   color: var(--text-color) 
+}
+
 .header {
     min-height: 108vh;
     width: 100%;
@@ -23,6 +38,7 @@
 .header ul {
     margin-top: -30px;
 }
+
 
 nav {
     display: flex;
@@ -67,8 +83,21 @@ nav img {
     width: 100%;
 }
 
+
+
 nav .fa {
     display: none;
+}
+
+.nav.container{
+    margin-top: -35px;  
+    margin-left: 30px;
+    list-style: none;  
+    
+}
+.nav.container .bx-shopping-bag {
+    font-size: 24px; /* Tamaño deseado del icono del carrito */
+    padding-right: 50px;
 }
 
 .text-box {
