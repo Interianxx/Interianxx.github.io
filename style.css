@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
 }
 
 :root{
@@ -20,7 +24,10 @@ body{
 }
 
 .header {
-
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
     min-height: 108vh;
     width: 100%;
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/limpieza.jpg);
@@ -28,6 +35,7 @@ body{
     background-size: cover;
     position: relative;
     overflow: hidden;
+    z-index: 100;
 }
 .header img{
     margin-top: -30px;
@@ -48,9 +56,6 @@ nav {
     align-items: center;
 }
 
-nav img {
-    width: 135px;
-}
 
 .nav-links {
     flex: 1;
@@ -245,11 +250,169 @@ h3 {
 .container{
     max-width: 1068px;
     margin: auto;
+    margin-bottom: 40px;
 }
 
 #cart-icon{
     cursor: pointer;
-    margin-top: 82px;
+    padding-top: 40px;
+}
+
+/*Carro*/
+
+.cart.active {
+    right: 0;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    max-width: 400px;
+    min-height: 96vh; /* Cambiado de vh a px para un mejor control del tamaño */
+    max-height: 96vh; /* Ajusta la altura máxima para mantener el carrito dentro de la ventana del navegador */
+    overflow-y: scroll;
+    overflow-x: hidden; /* Añade un scroll vertical siempre, incluso si no hay suficiente contenido */
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    z-index: 999;
+    color: black;
+    padding-top: 30px;
+    transition: 0.8s;
+}
+
+
+.cart.active{
+    right: 0;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #171427;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 40% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img {
+    max-width: 200px; 
+    max-height: 150px; 
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 0 0 35px 20px;
+    margin-left: -10px;
+
+}
+
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+/* Icono eliminar  */
+.cart-remove {
+    margin-left: -180px; 
+    margin-top: -50px
+}
+
+.cart-product-title{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: -70px;
+    margin-left: 20px;
+}
+
+.cart-price{
+    font-weight: 500;
+    text-align: left;
+    margin-top: -20px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+}
+
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color:var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
+.cart-remove{
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.total-price{
+    margin-left: 10px;
+    padding-right: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 20px; /* Ajusta según el margen deseado */
+    width: calc(95% - 20px); /* Ajusta según el ancho deseado */
+    height: 20px;
+    border-top: 1.5px solid var(--text-color);
+}
+
+.btn-buy{
+    display: flex;
+    margin: 20px 150px 30px ;
+    padding: 12px 30px;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-buy:hover{
+    background: var(--text-color) ;
+}
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
 }
 
 .section-title{
@@ -264,7 +427,6 @@ h3 {
 }
 
 /*Contenido de la tienda */
-
 
 .shop-content{
     display: grid;
@@ -283,8 +445,18 @@ h3 {
     transition: 0.4s;
 }
 
+.product-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
 
 .product-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
     margin-left: -5px;
     text-align: left;/* Cambia la fuente de los elementos <p> con la clase "product-title" */
 }
@@ -292,6 +464,21 @@ h3 {
 .price{
     padding-right: 40px;
     padding-left: 5px;
+    font-weight: 500;
+}
+
+.add-cart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-cart:hover{
+    background: hsl(249, 32%, 17%);
 }
 
 
