@@ -26,10 +26,9 @@
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="Servicios.html">SERVICIOS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="blog.html">INFORMACION</a></li>
                     <li><a href="Contactanos.html">CONTACTANOS</a></li>
-                    <i class='bx bx-shopping-bag' id="cart-icon" style='color:#ffffff'></i></a></li> </li>
-
+                    <i class='bx bx-shopping-bag' id="cart-icon" style='color:#ffffff'></i></a></li>
                 </ul>
             </div>
             <div class="nav container">
@@ -57,7 +56,7 @@
 
 
                 </div>
-                
+
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
@@ -70,93 +69,238 @@
         <h1 class="section-title">Paquetes</h1>
         <div class="shop-content">
             <!--Caja 1-->
-            <div class="product-box">
+            <div class="product-box" onclick="showSection('basico')">
                 <img src="images/Paquete 1.jpg" alt="" class="product-img">
                 <p class="product-title">Paquete servicio basico</p>
-                <span class="price">$250 MXN </span>
+                <span class="price">$150 MXN </span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
             <!--Caja 2-->
-            <div class="product-box">
+            <div class="product-box" onclick="showSection('a_vapor')">
                 <img src="images/Paquete 2.jpg" alt="" class="product-img">
                 <p class="product-title">Limpieza completa a vapor</p>
-                <span class="price">$400 MXN</span>
+                <span class="price">$200 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
             <!--Caja 3-->
-            <div class="product-box">
+            <div class="product-box" onclick="showSection('aerobica')">
                 <img src="images/Paquete 3.jpg" alt="" class="product-img">
                 <p class="product-title">Limpieza completa aerobica</p>
-                <span class="price">$1000 MXN</span>
+                <span class="price">$250 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
         </div>
     </section>
 
-    <section class="shop container">
-        <h1 class="section-title">Servicios extras</h1>
+    <!-- Basico -->
+
+    <section id="basico" class="shop container hidden">
+        <h1 class="section-title">Servicios extras basico</h1>
         <div class="shop-content">
             <!--Caja 1-->
             <div class="product-box">
                 <img src="images/Paquete 1.jpg" alt="" class="product-img">
-                <p class="product-title">Sala</p>
-                <span class="price">$460 MXN </span>
+                <p class="product-title">Sala Basico</p>
+                <span class="price">$150 MXN </span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
             <!--Caja 2-->
             <div class="product-box">
                 <img src="images/Paquete 2.jpg" alt="" class="product-img">
-                <p class="product-title">Comedor</p>
-                <span class="price">$360 MXN</span>
+                <p class="product-title">Comedor basico</p>
+                <span class="price">$150 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
             <!--Caja 3-->
             <div class="product-box">
-                <img src="images/Paquete 3.jpg" alt="" class="product-img">
-                <p class="product-title">Cocina</p>
-                <span class="price">$500 MXN</span>
+                <img src="images/Cocina2.jpg" alt="" class="product-img">
+                <p class="product-title">Cocina basico</p>
+                <span class="price">$150 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
             <!--Caja 4-->
             <div class="product-box">
-                <img src="images/Paquete 3.jpg" alt="" class="product-img">
-                <p class="product-title">Cochera</p>
-                <span class="price">$1499 MXN</span>
+                <img src="images/cochera.jpg" alt="" class="product-img">
+                <p class="product-title">Cochera basico</p>
+                <span class="price">$650 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
             <!--Caja 5-->
             <div class="product-box">
-                <img src="images/Paquete 1.jpg" alt="" class="product-img">
-                <p class="product-title">Cortinas</p>
-                <span class="price">$350 MXN </span>
+                <img src="images/Cortinas.jpg" alt="" class="product-img">
+                <p class="product-title">Cortinas basico</p>
+                <span class="price">$150 MXN </span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
             <!--Caja 6-->
             <div class="product-box">
-                <img src="images/Paquete 2.jpg" alt="" class="product-img">
+                <img src="images/Tapetes.jpg" alt="" class="product-img">
                 <p class="product-title">Tapetes</p>
-                <span class="price">$160 MXN</span>
+                <span class="price">$150 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
             <!--Caja 7-->
             <div class="product-box">
-                <img src="images/Paquete 3.jpg" alt="" class="product-img">
-                <p class="product-title">Alfombras</p>
-                <span class="price">$500 MXN</span>
+                <img src="images/Sofas.jpg" alt="" class="product-img">
+                <p class="product-title">Sofas</p>
+                <span class="price">$150 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
             <!--Caja 8-->
             <div class="product-box">
-                <img src="images/Paquete 3.jpg" alt="" class="product-img">
+                <img src="images/Colchones.jpg" alt="" class="product-img">
                 <p class="product-title">Colchones</p>
-                <span class="price">$700 MXN</span>
+                <span class="price">$450 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- A vapor -->
+    <section id="a_vapor" class="shop container hidden">
+        <h1 class="section-title">Servicios extras basico</h1>
+        <div class="shop-content">
+            <!--Caja 1-->
+            <div class="product-box">
+                <img src="images/Paquete 1.jpg" alt="" class="product-img">
+                <p class="product-title">Sala Basico</p>
+                <span class="price">$150 MXN </span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 2-->
+            <div class="product-box">
+                <img src="images/Paquete 2.jpg" alt="" class="product-img">
+                <p class="product-title">Comedor basico</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 3-->
+            <div class="product-box">
+                <img src="images/Cocina2.jpg" alt="" class="product-img">
+                <p class="product-title">Cocina basico</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 4-->
+            <div class="product-box">
+                <img src="images/cochera.jpg" alt="" class="product-img">
+                <p class="product-title">Cochera basico</p>
+                <span class="price">$650 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 5-->
+            <div class="product-box">
+                <img src="images/Cortinas.jpg" alt="" class="product-img">
+                <p class="product-title">Cortinas basico</p>
+                <span class="price">$150 MXN </span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 6-->
+            <div class="product-box">
+                <img src="images/Tapetes.jpg" alt="" class="product-img">
+                <p class="product-title">Tapetes</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 7-->
+            <div class="product-box">
+                <img src="images/Sofas.jpg" alt="" class="product-img">
+                <p class="product-title">Sofas</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 8-->
+            <div class="product-box">
+                <img src="images/Colchones.jpg" alt="" class="product-img">
+                <p class="product-title">Colchones</p>
+                <span class="price">$450 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Aerobico -->
+
+    <section id="aerobica" class="shop container hidden">
+        <h1 class="section-title">Servicios extras basico</h1>
+        <div class="shop-content">
+            <!--Caja 1-->
+            <div class="product-box">
+                <img src="images/Paquete 1.jpg" alt="" class="product-img">
+                <p class="product-title">Sala Basico</p>
+                <span class="price">$150 MXN </span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 2-->
+            <div class="product-box">
+                <img src="images/Paquete 2.jpg" alt="" class="product-img">
+                <p class="product-title">Comedor basico</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 3-->
+            <div class="product-box">
+                <img src="images/Cocina2.jpg" alt="" class="product-img">
+                <p class="product-title">Cocina basico</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 4-->
+            <div class="product-box">
+                <img src="images/cochera.jpg" alt="" class="product-img">
+                <p class="product-title">Cochera basico</p>
+                <span class="price">$650 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 5-->
+            <div class="product-box">
+                <img src="images/Cortinas.jpg" alt="" class="product-img">
+                <p class="product-title">Cortinas basico</p>
+                <span class="price">$150 MXN </span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 6-->
+            <div class="product-box">
+                <img src="images/Tapetes.jpg" alt="" class="product-img">
+                <p class="product-title">Tapetes</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 7-->
+            <div class="product-box">
+                <img src="images/Sofas.jpg" alt="" class="product-img">
+                <p class="product-title">Sofas</p>
+                <span class="price">$150 MXN</span>
+                <i class='bx bxs-shopping-bag add-cart'></i>
+            </div>
+
+            <!--Caja 8-->
+            <div class="product-box">
+                <img src="images/Colchones.jpg" alt="" class="product-img">
+                <p class="product-title">Colchones</p>
+                <span class="price">$450 MXN</span>
                 <i class='bx bxs-shopping-bag add-cart'></i>
             </div>
 
@@ -173,6 +317,7 @@
         <p2>Soluciones para tu hogar <i class=" fa fa-heart-o"></i></p2>
         </a>
     </section>
+    
 
     <!----JavaScript for toggle menu---->
     <script>
@@ -191,8 +336,9 @@
     <script src="script.js">
 
 
-
     </script>
+
+
 
 </body>
 

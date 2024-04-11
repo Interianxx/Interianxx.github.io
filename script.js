@@ -47,10 +47,10 @@ function ready() {
 
 // Buy
 
-function buyButtonClicked(){
+function buyButtonClicked() {
     alert("Tu orden ha sido procesada")
     var cartContent = document.getElementsByClassName("cart-content")[0];
-    while(cartContent.hasChildNodes()){
+    while (cartContent.hasChildNodes()) {
         cartContent.removeChild(cartContent.firstChild);
     }
     updateTotal();
@@ -116,30 +116,60 @@ function addProductToCart(title, price, productImg) {
 
 
 
+}
+
+function updateTotal() {
+    var cartContent = document.getElementsByClassName("cart-content")[0];
+    var cartBoxes = cartContent.getElementsByClassName("cart-box");
+    var total = 0;
+    for (var i = 0; i < cartBoxes.length; i++) {
+        var cartBox = cartBoxes[i];
+        var priceElement = cartBox.getElementsByClassName("cart-price")[0];
+        var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
+
+        // Verificar si los elementos existen antes de acceder a sus propiedades
+        if (priceElement && quantityElement) {
+            var price = parseFloat(priceElement.innerText.replace("$", ""));
+            var quantity = quantityElement.value;
+            total += price * quantity;
+        }
+
     }
 
-    function updateTotal() {
-        var cartContent = document.getElementsByClassName("cart-content")[0];
-        var cartBoxes = cartContent.getElementsByClassName("cart-box");
-        var total = 0;
-        for (var i = 0; i < cartBoxes.length; i++) {
-            var cartBox = cartBoxes[i];
-            var priceElement = cartBox.getElementsByClassName("cart-price")[0];
-            var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
-            
-            // Verificar si los elementos existen antes de acceder a sus propiedades
-            if (priceElement && quantityElement) {
-                var price = parseFloat(priceElement.innerText.replace("$", ""));
-                var quantity = quantityElement.value;
-                total += price * quantity;
-            }
-            
-        }
-    
-        // Actualizar el precio total en la interfaz de usuario
-        var totalPriceElement = document.getElementsByClassName("total-price")[0];
-        if (totalPriceElement) {
-            totalPriceElement.innerText = "$" + total;
-        }
+    // Actualizar el precio total en la interfaz de usuario
+    var totalPriceElement = document.getElementsByClassName("total-price")[0];
+    if (totalPriceElement) {
+        totalPriceElement.innerText = "$" + total;
     }
-    
+}
+
+// Ocultar paquetes
+
+function showSection(sectionId) {
+    // Oculta todas las secciones de servicios extras
+    var sections = document.querySelectorAll(".shop.container > .product-box");
+    sections.forEach(function (section) {
+        section.classList.add("hidden");
+    });
+
+    // Muestra la sección correspondiente al paquete seleccionado
+    var selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.classList.remove("hidden");
+    }
+}
+
+
+
+
+// Barra lateral
+
+var navLinks = document.getElementById("navLinks");
+
+function showMenu() {
+    navLinks.style.right = "0";
+}
+
+function hideMenu() {
+    navLinks.style.right = "-200px";
+}

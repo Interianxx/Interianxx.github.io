@@ -15,6 +15,11 @@
 
 }
 
+.hidden {
+    display: none;
+    transition: 2s;
+}
+
 img{
     width: 100%;   
 }
@@ -546,7 +551,6 @@ h3 {
 }
 
 .layer:hover h31 {
-    bottom: 0%;
     opacity: 1;
 }
 

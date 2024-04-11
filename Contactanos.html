@@ -26,10 +26,9 @@
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="Servicios.html">SERVICIOS</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="blog.html">INFORMACION</a></li>
                     <li><a href="Contactanos.html">CONTACTANOS</a></li>
-                    <i class='bx bx-shopping-bag' id="cart-icon" style='color:#ffffff'></i></a></li> </li>
-
+                    <i class='bx bx-shopping-bag' id="cart-icon" style='color:#ffffff'></i></a></li>
                 </ul>
             </div>
             <div class="nav container">
@@ -57,7 +56,7 @@
 
 
                 </div>
-                
+
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
@@ -108,7 +107,8 @@
                     <input type="text" name="name" placeholder="Introduce tu nombre" required>
                     <input type="email" name="email" placeholder="Correo electronico" required>
                     <input type="text" name="subject" placeholder="Asunto" required>
-                    <textarea rows="8" name="message" placeholder="Describe su problema o sugerencias" required></textarea>
+                    <textarea rows="8" name="message" placeholder="Describe su problema o sugerencias"
+                        required></textarea>
                     <button type="submit" class="hero-btn red-btn">Enviar mensaje</button>
                 </form>
             </div>
@@ -127,26 +127,13 @@
         </a>
     </section>
 
-    <!----JavaScript for toggle menu---->
-    <script>
-        var navLinks = document.getElementById("navLinks");
+    <!--Carrito-->
+    <script src="script.js">
 
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
 
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-        }
+
+
     </script>
-
-        <!--Carrito-->
-        <script src="script.js">
-
-
-
-
-        </script>
 
 </body>
 
