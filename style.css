@@ -62,6 +62,12 @@ nav {
     text-align: right;
 }
 
+.nav-links #cart-icon{
+    font-size: 20px;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
 .nav-links ul li {
     list-style: none;
     display: inline-block;
@@ -518,10 +524,11 @@ h3 {
     left: 0;
     position: absolute;
     transition: .5s;
+    background: rgba(73, 93, 212, 0.7);
 }
 
 .layer:hover {
-    background: rgba(43, 69, 216, 0.7);
+    background: none; 
 }
 
 .layer h31 {
@@ -533,13 +540,14 @@ h3 {
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     transition: .5s;
+    bottom: 49%;
 }
 
 .layer:hover h31 {
-    bottom: 49%;
-    opacity: 1;
+    bottom: 0%;
+    opacity: 0;
 }
 
 /*-------------- Facilities ----------------*/
@@ -872,6 +880,7 @@ h3 {
 @media (max-width:700px) {
     .sub-header h1 {
         font-size: 24px;
+        padding: 0 20px;
     }
 }
 
