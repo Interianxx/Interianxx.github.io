@@ -74,14 +74,22 @@ function quantityChanged(event) {
 
 // Añadir al carrito
 function addCartClicked(event) {
-    var button = event.target;
-    var shopProductos = button.parentElement;
-    var title = shopProductos.getElementsByClassName("product-title")[0].innerText;
-    var price = shopProductos.getElementsByClassName("price")[0].innerText;
-    var productImg = shopProductos.getElementsByClassName("product-img")[0].src;
+    var image = event.target;
+    var productBox = image.closest(".product-box");
+    var title = productBox.querySelector(".product-title").innerText;
+    var price = productBox.querySelector(".price").innerText;
+    var productImg = productBox.querySelector(".product-img").src;
     addProductToCart(title, price, productImg);
     updateTotal();
 }
+
+
+var productImages = document.querySelectorAll('.product-img');
+productImages.forEach(function (image) {
+    image.addEventListener('click', addCartClicked);
+});
+
+var booleanOpen = false;
 
 function addProductToCart(title, price, productImg) {
     var cartShopBox = document.createElement("div");
@@ -96,6 +104,10 @@ function addProductToCart(title, price, productImg) {
         }
 
     }
+
+    // Para que solo se active la primera vez que se agregue un producto
+
+
 
     var cartBoxContent = `
                  <img src="${productImg}" alt="" class="cart-img">
@@ -114,8 +126,13 @@ function addProductToCart(title, price, productImg) {
     // Actualizar el precio
     updateTotal();
 
-
-
+    if (!booleanOpen) {
+        var cart = document.querySelector(".cart");
+        if (!cart.classList.contains("active")) {
+            cart.classList.add("active");
+        }
+        booleanOpen = true;
+    }
 }
 
 function updateTotal() {
@@ -157,8 +174,8 @@ function showSection(sectionId) {
     if (selectedSection) {
         selectedSection.classList.remove("hidden");
     }
-}
 
+}
 
 
 
