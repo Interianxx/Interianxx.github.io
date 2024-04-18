@@ -822,7 +822,7 @@ h3 {
 }
 
 .blog-right {
-    flex-basis: 34%;
+    flex-basis: 40%;
 }
 
 .blog-left img {
@@ -845,7 +845,7 @@ h3 {
 .blog-right h3 {
     background: #f44336;
     color: #fff;
-    padding: 8px 2px;
+    padding: 8px 8px;
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -855,8 +855,9 @@ h3 {
     align-items: center;
     justify-content: space-between;
     color: #555;
-    padding: 5px 10px;
+    padding: 5px 5px;
     box-sizing: border-box;
+    padding-left: 15px;
 }
 
 
