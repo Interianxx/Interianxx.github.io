@@ -43,23 +43,33 @@ function ready() {
     }
 
     document.getElementsByClassName("btn-buy")[0].addEventListener("click", buyButtonClicked);
+
+    loadCart();
 }
 
 // Buy
 
-function buyButtonClicked() {
-    alert("Tu orden ha sido procesada")
-    var cartContent = document.getElementsByClassName("cart-content")[0];
-    while (cartContent.hasChildNodes()) {
-        cartContent.removeChild(cartContent.firstChild);
-    }
-    updateTotal();
+function buyButtonClicked(event) {
+    event.preventDefault(); // Evitar que el formulario se envíe
+
+    var overlay = document.getElementById("overlay");
+    overlay.classList.add("active");
+
+    var emailForm = document.getElementById("email-form");
+    emailForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var email = document.getElementById("email-input").value;
+        sendEmail(email);
+        overlay.classList.remove("active");
+    });
 }
+
 
 function removeCarritoItem(event) {
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
     updateTotal();
+    updateLocalStorage();
 }
 
 // Quantity Changes
@@ -69,6 +79,7 @@ function quantityChanged(event) {
         input.value = 1;
     }
     updateTotal();
+    updateLocalStorage();
 }
 
 
@@ -81,12 +92,13 @@ function addCartClicked(event) {
     var productImg = productBox.querySelector(".product-img").src;
     addProductToCart(title, price, productImg);
     updateTotal();
+    updateLocalStorage();
 }
 
 
-var productImages = document.querySelectorAll('.product-img');
+var productImages = document.querySelectorAll(".product-img");
 productImages.forEach(function (image) {
-    image.addEventListener('click', addCartClicked);
+    image.addEventListener("click", addCartClicked);
 });
 
 var booleanOpen = false;
@@ -133,6 +145,8 @@ function addProductToCart(title, price, productImg) {
         }
         booleanOpen = true;
     }
+
+    updateLocalStorage();
 }
 
 function updateTotal() {
@@ -160,8 +174,28 @@ function updateTotal() {
     }
 }
 
-// Ocultar paquetes
+// Guardar en localStorage
+function updateLocalStorage() {
+    var cartContent = document.querySelector(".cart-content");
+    localStorage.setItem("cartItems", cartContent.innerHTML);
+}
 
+// Cargar carrito desde localStorage
+function loadCart() {
+    var cartContent = document.querySelector(".cart-content"); // Cambio aquí
+    cartContent.innerHTML = localStorage.getItem("cartItems") || '';
+    var removeButtons = cartContent.querySelectorAll(".cart-remove");
+    removeButtons.forEach(function (button) {
+        button.addEventListener("click", removeCarritoItem);
+    });
+    var quantityInputs = cartContent.querySelectorAll(".cart-quantity");
+    quantityInputs.forEach(function (input) {
+        input.addEventListener("change", quantityChanged);
+    });
+    updateTotal();
+}
+
+// Ocultar paquetes
 function showSection(sectionId) {
     // Oculta todas las secciones de servicios extras
     var sections = document.querySelectorAll(".shop.container > .product-box");
@@ -176,6 +210,7 @@ function showSection(sectionId) {
     }
 
 }
+
 
 
 

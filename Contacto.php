@@ -11,7 +11,7 @@
     
     $email_body =   "Nombre del usuario: $name.\n".
                     "Email del usuario: $visitor_email.\n".
-                    "Razon: $subject.\n".
+                    "Razón: $subject.\n".
                     "Mensaje del usuario: $message.\n";
 
 
@@ -23,7 +23,6 @@
 
     mail($to,$email_subject,$email_body,$headers);
 
-    header("Location: Contactanos.html");
+    header("Location: Contáctenos.html");
 
 
-?>
