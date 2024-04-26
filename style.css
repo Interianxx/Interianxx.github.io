@@ -334,7 +334,11 @@ h3 {
 /* Icono eliminar  */
 .cart-remove {
     margin-left: -180px; 
-    margin-top: -50px
+    margin-top: -50px;
+}
+
+body.index .cart-remove {
+    padding-left: 110px;
 }
 
 .cart-product-title{
