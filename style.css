@@ -415,6 +415,12 @@ h3 {
 
 .btn-buy:hover{
     background: var(--text-color) ;
+
+}
+
+.user_email{
+    padding-right: 150px;
+    margin-top: -23px;
 }
 #close-cart {
     position: absolute;
@@ -435,6 +441,7 @@ h3 {
 .shop{
     margin-top: 2rem;
 }
+
 
 /*Contenido de la tienda */
 
