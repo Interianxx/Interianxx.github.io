@@ -212,6 +212,9 @@ function showSection(sectionId) {
 }
 
 function comprar(event) {
+    // Evita que el formulario se envíe
+    event.preventDefault();
+
     // Obtiene el correo electrónico ingresado por el usuario
     var userEmail = document.getElementById("user_email").value;
 
@@ -220,14 +223,33 @@ function comprar(event) {
 
     // Crea el contenido del correo
     var mailContent = "Correo electrónico: " + userEmail + "\n" +
-        "Total de la compra: " + totalPrice;
+                      "Total de la compra: " + totalPrice;
 
-    // Abre el cliente de correo electrónico con el contenido predefinido
-    window.open('mailto:info@sweethome.icu?subject=Compra&body=' + encodeURIComponent(mailContent));
+    // Envía el correo tanto al cliente como a sweethome.icu
+    var data = new FormData();
+    data.append('user_email', userEmail);
+    data.append('total_price', totalPrice);
 
-    // Evita que el formulario se envíe
-    event.preventDefault();
+    fetch('enviar_correo.php', {
+        method: 'POST',
+        body: data
+    })
+    .then(response => {
+        if (response.ok) {
+            // Si el correo se envía correctamente
+            alert('¡Gracias por tu compra! Hemos recibido tu pedido.');
+            window.location.href = 'Contáctenos.html';
+        } else {
+            // Si hay un error al enviar el correo
+            alert('Lo sentimos, ha ocurrido un error al procesar tu pedido. Por favor, inténtalo de nuevo más tarde.');
+            window.location.href = 'Contáctenos.html';
+        }
+    })
+    .catch(error => {
+        console.error('Error al enviar el correo:', error);
+    });
 }
+
 
 
 
