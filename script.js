@@ -211,6 +211,24 @@ function showSection(sectionId) {
 
 }
 
+function comprar(event) {
+    // Obtiene el correo electrónico ingresado por el usuario
+    var userEmail = document.getElementById("user_email").value;
+
+    // Obtiene el total de la compra
+    var totalPrice = document.querySelector(".total-price").textContent;
+
+    // Crea el contenido del correo
+    var mailContent = "Correo electrónico: " + userEmail + "\n" +
+        "Total de la compra: " + totalPrice;
+
+    // Abre el cliente de correo electrónico con el contenido predefinido
+    window.open('mailto:info@sweethome.icu?subject=Compra&body=' + encodeURIComponent(mailContent));
+
+    // Evita que el formulario se envíe
+    event.preventDefault();
+}
+
 
 
 

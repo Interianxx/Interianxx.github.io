@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Interian Alejandro"> <!-- Github: Interianxx-->
-    <meta http-equiv="Cache-Control" content="no-cache">  
+    <meta http-equiv="Cache-Control" content="no-cache">
     <title>Sweet Home - El aroma de la limpieza</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
                     <li><a href="blog.html">INFORMACIÓN</a></li>
                     <li><a href="Terminos.html">TÉRMINOS</a></li>
                     <li><a href="Contactanos.html">CONTÁCTENOS</a></li>
-                    <i class='bx bx-shopping-bag' id="cart-icon" style='color:#ffffff'></i></a></li>                  
+                    <i class='bx bx-shopping-bag' id="cart-icon" style='color:#ffffff'></i></a></li>
                 </ul>
             </div>
             <div class="nav container">
@@ -42,28 +42,29 @@
                     <h2 class="cart-title">Tu Carrito</h2>
 
                     <div class="cart-content">
-
-                        <div class="cart-box">
-
-                        </div>
+                        <div class="cart-box"></div>
                     </div>
                     <!-- Total -->
                     <div class="total">
                         <div class="total-title">Total</div>
                         <div class="total-price">$0</div>
                     </div>
+                    <!-- Formulario de correo electrónico y botón de compra -->
                     <!-- Botón de comprar -->
-                    <form class="user_email">
+                    <form class="user_email" action="enviar_correo.php" method="post">
                         <label for="user_email">Correo electrónico:</label>
                         <br>
-                        <input type="email" id="user_email" name="user_email">
+                        <input type="email" id="user_email" name="user_email" required>
+                        <br>
+                        <button type="submit" class="btn-buy" onclick="comprar(event)">Comprar</button>
                     </form>
-                    <button type="button" class="btn-buy">Comprar</button>
+                    
+                    
+
                     <!-- Cerrar carrito -->
                     <i class='bx bx-x' id="close-cart"></i>
-
-
                 </div>
+
 
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -326,7 +327,7 @@
         </a>
     </section>
 
-    
+
 
     <!----JavaScript for toggle menu---->
     <script>
