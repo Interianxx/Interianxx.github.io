@@ -890,15 +890,24 @@ body.index .cart-remove {
 .Sections h1{
     font-size: 1.5rem;
     text-align: left;
-    padding: 20px 0 0 10px;
-    margin-bottom: 5px;
+    padding: 15px 0px 0px 8px;
+    margin-bottom: -5px;
+    font-weight: 800;
+    color: rgb(24, 103, 134);
+}
+
+.Sections h2{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 15px 0 0 10px;
     
 }
 
 .Sections p{
+    margin-top: -5px;
     text-align: left;
     font-size: 1rem;
-    margin-bottom: -40px;
+
 }
     
 
