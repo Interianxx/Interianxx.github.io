@@ -52,8 +52,20 @@
                         <div class="total-title">Total</div>
                         <div class="total-price">$0</div>
                     </div>
+
+                    
                     <!-- Botón de comprar -->
-                    <button type="button" class="btn-buy">Comprar</button>
+
+
+                    <form class="user_email" action="enviar_correo.php" method="post">
+                        <!-- Campo de correo electrónico del usuario -->
+                        <label for="user_email">Correo electrónico:</label>
+                        <br>
+                        <input type="email" id="user_email" name="user_email" required>
+                        <br>
+                        <!-- Botón de comprar -->
+                        <button type="submit" class="btn-buy" onclick="comprar()">Comprar</button>
+                    </form>
                     <!-- Cerrar carrito -->
                     <i class='bx bx-x' id="close-cart"></i>
 
