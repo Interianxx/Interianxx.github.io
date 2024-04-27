@@ -211,8 +211,8 @@ function showSection(sectionId) {
 
 }
 
-function comprar(event) {
-    // Evita que el formulario se envíe
+function comprar() {
+    // Evita que el formulario se envíe automáticamente
     event.preventDefault();
 
     // Obtiene el correo electrónico ingresado por el usuario
@@ -220,10 +220,6 @@ function comprar(event) {
 
     // Obtiene el total de la compra
     var totalPrice = document.querySelector(".total-price").textContent;
-
-    // Crea el contenido del correo
-    var mailContent = "Correo electrónico: " + userEmail + "\n" +
-                      "Total de la compra: " + totalPrice;
 
     // Envía el correo tanto al cliente como a sweethome.icu
     var data = new FormData();
@@ -249,6 +245,8 @@ function comprar(event) {
         console.error('Error al enviar el correo:', error);
     });
 }
+
+
 
 
 

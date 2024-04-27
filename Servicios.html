@@ -52,16 +52,14 @@
                     <!-- Formulario de correo electrónico y botón de compra -->
                     <!-- Botón de comprar -->
                     <form class="user_email" action="enviar_correo.php" method="post">
+                        <!-- Campo de correo electrónico del usuario -->
                         <label for="user_email">Correo electrónico:</label>
                         <br>
                         <input type="email" id="user_email" name="user_email" required>
                         <br>
-                        <button type="submit" class="btn-buy" onclick="comprar(event)">Comprar</button>
+                        <!-- Botón de comprar -->
+                        <button type="submit" class="btn-buy" onclick="comprar()">Comprar</button>
                     </form>
-                    
-                    
-                    
-
                     <!-- Cerrar carrito -->
                     <i class='bx bx-x' id="close-cart"></i>
                 </div>

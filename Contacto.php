@@ -17,14 +17,12 @@
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $visitor_email \r\n";
     mail($to,$email_subject,$email_body,$headers);
-    header("Location: Contactanos.html");
 
     // Enviar correo de compra
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userEmail = $_POST['user_email'];
         $totalPrice = $_POST['total_price'];
 
-        $email_from = 'info@sweethome.icu';
         $email_subject = "Compra";
         $email_body =   "Correo electrónico: $userEmail\n" .
                         "Total de la compra: $totalPrice";
@@ -42,4 +40,9 @@
             http_response_code(500);
         }
     }
+
+    header("Location: Contactanos.html");
 ?>
+
+
+
