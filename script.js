@@ -238,11 +238,11 @@ function comprar(event) {
         if (response.ok) {
             // Si el correo se envía correctamente
             alert('¡Gracias por tu compra! Hemos recibido tu pedido.');
-            window.location.href = 'Contáctenos.html';
+            window.location.href = 'Contactanos.html';
         } else {
             // Si hay un error al enviar el correo
             alert('Lo sentimos, ha ocurrido un error al procesar tu pedido. Por favor, inténtalo de nuevo más tarde.');
-            window.location.href = 'Contáctenos.html';
+            window.location.href = 'Contactanos.html';
         }
     })
     .catch(error => {

@@ -17,7 +17,7 @@
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $visitor_email \r\n";
     mail($to,$email_subject,$email_body,$headers);
-    header("Location: Contáctenos.html");
+    header("Location: Contactanos.html");
 
     // Enviar correo de compra
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
